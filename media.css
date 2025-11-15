@@ -1,0 +1,399 @@
+/* Celulares */
+@media (max-width: 450px) {
+  .subheader h2 {
+    font-size: 1.47rem;
+  }
+  .app-header .subheader-first h3 {
+    font-size: 1.47rem;
+  }
+  .app-header .text-header h1 {
+    font-size: 3.9rem;
+  }
+  .app-header .social-midia-header ul li a img {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.7rem;
+  }
+  .app-aboutme .about-me {
+    flex-direction: column;
+    width: 100%;
+  }
+  .app-aboutme .about-me .text-aboutme {
+    width: 100%;
+    max-width: 24rem;
+    height: auto;
+  }
+  .app-aboutme .about-me .text-aboutme .text-aboutme-big {
+    height: auto;
+    width: 100%;
+  }
+  .app-aboutme .about-me .text-aboutme .text-aboutme-big p {
+    font-size: 1.8rem;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+  .app-aboutme .about-me .text-aboutme .text-aboutme-small {
+    height: auto;
+    width: 100%;
+  }
+  .app-aboutme .about-me .text-aboutme .text-aboutme-small p {
+    font-size: 0.8rem;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme div {
+    width: 45%;
+    height: 3rem;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme div a {
+    font-size: 0.9rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme .button-download-cv {
+    padding: 0px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0px;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme .button-download-cv a {
+    align-self: center;
+    justify-self: center;
+  }
+  .app-aboutme .about-me .text-aboutme .buttons-aboutme .button-contactme {
+    padding: 0px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 0px;
+  }
+  .app-aboutme .about-me .profile-photo {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-aboutme .about-me .profile-photo img {
+    width: 18rem;
+    height: 18rem;
+  }
+  .certificates-and-techstack {
+    width: 100%;
+    display: flex;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack .button-certificates {
+    width: 100%;
+    height: auto;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack .button-techstack {
+    width: 100%;
+    height: auto;
+  }
+  .certificates-and-techstack .techstack {
+    width: 100%;
+    display: grid;
+    row-gap: 2px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-name {
+    font-size: 1.2rem;
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.4rem;
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .certificates-and-techstack .certificates {
+    width: 100%;
+    display: grid;
+    row-gap: 2px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .certificates-and-techstack .certificates .certificates-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .certificates-and-techstack .certificates .certificates-box img {
+    margin-top: 1rem;
+    height: 12.78rem;
+    width: 21.93rem;
+  }
+  .app-myprojects .my-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .app-myprojects .my-projects .projects .mockup-notebook {
+    height: 23rem;
+    width: 23rem;
+  }
+  .app-myprojects .my-projects .projects h5 {
+    bottom: 0.2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .app-myprojects .my-projects .projects .technologies-used {
+    margin-top: 1rem;
+  }
+  .app-myprojects .my-projects .projects .technologies-used ul li .icon-wrapper {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .app-myprojects .my-projects .projects .technologies-used ul li .icon-wrapper .myproject-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  .app-myprojects .my-projects .projects.left {
+    width: 100%;
+  }
+  .app-myprojects .my-projects .projects.right {
+    width: 100%;
+  }
+  .app-contactme {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    height: auto;
+  }
+  .app-contactme .contactme-main {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello {
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .sudheader-and-share {
+    margin: 1rem;
+    width: 90%;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .sudheader-and-share h5 {
+    font-size: 1.4rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .sudheader-and-share .share {
+    height: 1rem;
+    width: 1rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email p {
+    font-size: 0.8rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme {
+    margin: 1rem 0 0 0;
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.your-message {
+    margin: 1rem 0 0 0;
+    border-radius: 10px;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.send-message {
+    margin: 1rem 0 1rem 0;
+    border-radius: 10px;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 0.8rem;
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect {
+    width: 90%;
+    height: auto;
+    flex: 1 1 4rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect a {
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect.youtube {
+    margin-bottom: 1rem;
+  }
+  .app-contactme .contactme-main .comments {
+    width: 100%;
+  }
+  .app-contactme .contactme-main .comments h5 {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+  .app-contactme .contactme-main .comments .box-comments {
+    align-self: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+  .app-contactme .contactme-main .comments .box-comments img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .app-contactme .contactme-main .comments .box-comments.send-profile-photo a {
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  .app-contactme .contactme-main .comments .box-comments.button-send-comment {
+    align-self: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .certificates-and-techstack {
+    width: 100%;
+    display: flex;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack .button-certificates {
+    width: 100%;
+    height: auto;
+  }
+  .certificates-and-techstack .buttons-certificates-and-techstack .button-techstack {
+    width: 100%;
+    height: auto;
+  }
+  .certificates-and-techstack .techstack {
+    width: 100%;
+    display: grid;
+    row-gap: 2px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-name {
+    font-size: 1.2rem;
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.4rem;
+  }
+  .certificates-and-techstack .techstack .teckstack-box .techstack-box-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .certificates-and-techstack .certificates {
+    width: 100%;
+    display: grid;
+    row-gap: 2px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .certificates-and-techstack .certificates .certificates-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .certificates-and-techstack .certificates .certificates-box img {
+    margin-top: 1.5rem;
+    height: 11rem;
+    width: 18.43rem;
+  }
+  .app-myprojects .my-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .app-myprojects .my-projects .projects .mockup-notebook {
+    height: 20rem;
+    width: 20rem;
+  }
+  .app-myprojects .my-projects .projects h5 {
+    bottom: 0.2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .app-myprojects .my-projects .projects .technologies-used {
+    margin-top: 1rem;
+  }
+  .app-myprojects .my-projects .projects .technologies-used ul li .icon-wrapper {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .app-myprojects .my-projects .projects .technologies-used ul li .icon-wrapper .myproject-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+  .app-contactme {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    height: auto;
+  }
+  .app-contactme .contactme-main {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello {
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 0.8rem;
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect {
+    width: 90%;
+    height: auto;
+    flex: 1 1 4rem;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect a {
+    width: 100%;
+    height: auto;
+  }
+  .app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect.tiktok a .tiktok-text .text-2 {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=media.css.map */

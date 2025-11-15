@@ -1,0 +1,524 @@
+/* Celulares */
+
+@media (max-width: 450px) {
+    .subheader {
+        h2 {
+            font-size: 1.47rem;
+        }
+    }
+    .app-header {
+        .subheader-first {
+            h3 {
+                font-size: 1.47rem;
+            }
+        }
+
+        .text-header {
+            h1 {
+                font-size: 3.9rem;
+            }
+        }
+
+        .social-midia-header {
+            ul {
+                li {
+                    a {
+                        img {
+                            height: 2rem;
+                            width: 2rem;
+                            margin-right: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .app-aboutme {
+        .about-me {
+            flex-direction: column;
+            width: 100%;
+
+            .text-aboutme {
+                width: 100%;
+                max-width: 24rem;
+                height: auto;
+
+                .text-aboutme-big {
+                    height: auto;
+                    width: 100%;
+
+                    p {
+                        font-size: 1.8rem;
+                        text-align: left;
+                        flex-wrap: wrap;
+                    }
+                }
+
+                .text-aboutme-small {
+                    height: auto;
+                    width: 100%;
+
+                    p {
+                        font-size: 0.8rem;
+                        text-align: left;
+                        word-wrap: break-word;
+                        overflow-wrap: break-word;
+                        white-space: normal;
+                    }
+                }
+
+                .buttons-aboutme {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    div {
+                        width: 45%;
+                        height: 3rem;
+
+                        a {
+                            font-size: 0.9rem;
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 0.8rem 0;
+                        }
+                    }
+
+                    .button-download-cv {
+                        padding: 0px;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+                        margin-left: 0px;
+
+                        a {
+                            align-self: center;
+                            justify-self: center;
+                        }
+                    }
+
+                    .button-contactme {
+                        padding: 0px;
+                        margin-top: 1.5rem;
+                        margin-bottom: 1.5rem;
+                        margin-right: 0px;
+                    }
+                }
+            }
+
+            .profile-photo {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
+        }
+    }
+
+    .certificates-and-techstack {
+        width: 100%;
+        display: flex;
+
+        .buttons-certificates-and-techstack {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .button-certificates {
+                width: 100%;
+                height: auto;
+            }
+
+            .button-techstack {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .techstack {
+            width: 100%;
+            display: grid;
+            row-gap: 2px;
+            grid-template-columns: repeat(1, 1fr);
+
+            .teckstack-box {
+                .techstack-box-name {
+                    font-size: 1.2rem;
+                }
+
+                .techstack-box-icon {
+                    width: 3rem;
+                    height: 3rem;
+                    margin-bottom: 0.4rem;
+                }
+
+                .techstack-box-text {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .certificates {
+            width: 100%;
+            display: grid;
+            row-gap: 2px;
+            grid-template-columns: repeat(1, 1fr);
+
+            .certificates-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-top: 1rem;
+                    height: 12.78rem;
+                    width: 21.93rem;
+                }
+            }
+        }
+    }
+
+    .app-myprojects {
+        .my-projects {
+            display: flex;
+            flex-direction: column;
+
+            .projects {
+                .mockup-notebook {
+                    height: 23rem;
+                    width: 23rem;
+                }
+
+                h5 {
+                    bottom: 0.2rem;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+
+                .technologies-used {
+                    margin-top: 1rem;
+                    ul {
+                        li {
+                            .icon-wrapper {
+                                width: 2.8rem;
+                                height: 2.8rem;
+
+                                .myproject-icon {
+                                    width: 2.8rem;
+                                    height: 2.8rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projects.left {
+                width: 100%;
+            }
+
+            .projects.right {
+                width: 100%;
+            }
+        }
+    }
+
+    .app-contactme {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        height: auto;
+
+        .contactme-main {
+            width: 100%;
+            flex-direction: column;
+            gap: 2rem;
+            height: auto;
+
+            .send-me-a-hello {
+                width: 100%;
+                height: auto;
+
+                .send-me-a-email {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+
+                    .sudheader-and-share {
+                        margin: 1rem;
+                        width: 90%;
+
+                        h5 {
+                            font-size: 1.4rem;
+                        }
+                        .share {
+                            height: 1rem;
+                            width: 1rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+
+                    .box-contactme {
+                        margin: 1rem 0 0 0;
+                        width: 90%;
+                        font-size: 0.9rem;
+                        padding: 0.8rem 1rem;
+                        border-radius: 10px;
+
+                        img {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+
+                    .box-contactme.your-message {
+                        margin: 1rem 0 0 0;
+                        border-radius: 10px;
+                    }
+
+                    .box-contactme.send-message {
+                        margin: 1rem 0 1rem 0;
+                        border-radius: 10px;
+                    }
+                }
+
+                .connect-with-me {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    gap: 0.8rem;
+                    width: 100%;
+                    height: auto;
+
+                    .box-connect {
+                        width: 90%;
+                        height: auto;
+                        flex: 1 1 4rem;
+
+                        a {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .box-connect.youtube {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .comments {
+                width: 100%;
+
+                h5 {
+                    font-size: 1.4rem;
+                    margin: 1rem;
+                }
+
+                .box-comments {
+                    align-self: center;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    width: 90%;
+                    font-size: 0.9rem;
+                    padding: 0.8rem 1rem;
+                    border-radius: 10px;
+
+                    img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+
+                .box-comments.send-profile-photo {
+                    a {
+                        width: 100%;
+                        height: auto;
+                        font-size: 1rem;
+                        padding: 0.5rem;
+                        border-radius: 10px;
+                    }
+                }
+
+                .box-comments.button-send-comment {
+                    align-self: center;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    width: 90%;
+                    font-size: 0.9rem;
+                    padding: 0.8rem 1rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .certificates-and-techstack {
+        width: 100%;
+        display: flex;
+
+        .buttons-certificates-and-techstack {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .button-certificates {
+                width: 100%;
+                height: auto;
+            }
+
+            .button-techstack {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .techstack {
+            width: 100%;
+            display: grid;
+            row-gap: 2px;
+            grid-template-columns: repeat(1, 1fr);
+
+            .teckstack-box {
+                .techstack-box-name {
+                    font-size: 1.2rem;
+                }
+
+                .techstack-box-icon {
+                    width: 3rem;
+                    height: 3rem;
+                    margin-bottom: 0.4rem;
+                }
+
+                .techstack-box-text {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .certificates {
+            width: 100%;
+            display: grid;
+            row-gap: 2px;
+            grid-template-columns: repeat(1, 1fr);
+
+            .certificates-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    margin-top: 1.5rem;
+                    height: 11rem;
+                    width: 18.43rem;
+                }
+            }
+        }
+    }
+
+    .app-myprojects {
+        .my-projects {
+            display: flex;
+            flex-direction: column;
+
+            .projects {
+                .mockup-notebook {
+                    height: 20rem;
+                    width: 20rem;
+                }
+
+                h5 {
+                    bottom: 0.2rem;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+
+                .technologies-used {
+                    margin-top: 1rem;
+                    ul {
+                        li {
+                            .icon-wrapper {
+                                width: 2.2rem;
+                                height: 2.2rem;
+
+                                .myproject-icon {
+                                    width: 2.2rem;
+                                    height: 2.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .app-contactme {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        height: auto;
+
+        .contactme-main {
+            width: 100%;
+            flex-direction: column;
+            gap: 2rem;
+            height: auto;
+
+            .send-me-a-hello {
+                width: 100%;
+                height: auto;
+
+                .connect-with-me {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    gap: 0.8rem;
+                    width: 100%;
+                    height: auto;
+
+                    .box-connect {
+                        width: 90%;
+                        height: auto;
+                        flex: 1 1 4rem;
+
+                        a {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .box-connect.tiktok {
+                        a {
+                            .tiktok-text {
+                                .text-2 {
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

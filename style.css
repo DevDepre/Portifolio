@@ -1,0 +1,883 @@
+/* ============================= */
+/* IMPORTAÇÕES DE FONTES         */
+/* ============================= */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+/* ============================= */
+/* VARIÁVEIS CSS                 */
+/* ============================= */
+:root {
+    --seasalt: #f8f9faff;
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray: #ced4daff;
+    --french-gray-2: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --outer-space: #495057ff;
+    --onyx: #343a40ff;
+    --eerie-black: #212529ff;
+}
+
+/* ============================= */
+/* SELETORES GLOBAIS             */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--seasalt);
+    font-family: "JetBrains Mono";
+}
+
+a {
+    text-decoration: none;
+}
+
+.color-black {
+    color: black;
+}
+
+.color-white {
+    color: var(--seasalt);
+}
+
+/* ============================= */
+/* ANIMAÇÕES E TRANSIÇÕES        */
+/* ============================= */
+
+.slide-in-left {
+    transform: translateX(0);
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-in-right {
+    transform: translateX(0);
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s ease forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s ease forwards;
+}
+
+.text-aboutme,
+.profile-photo,
+.buttons-aboutme {
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.text-aboutme {
+    transform: translateX(-100px);
+}
+
+.profile-photo {
+    transform: translateX(100px);
+}
+
+.buttons-aboutme {
+    transform: translateY(50px);
+}
+
+.text-aboutme.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+}
+
+.profile-photo.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+.buttons-aboutme.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+/* ----------------------------- */
+/* KEYFRAMES                     */
+/* ----------------------------- */
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50px);
+        visibility: hidden;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+        visibility: hidden;
+    }
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff;
+        opacity: 1;
+    }
+    50% {
+        text-shadow: 0 0 2px #fff, 0 0 5px #0ff;
+        opacity: 0.8;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.04));
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.02);
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.06));
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+    }
+    100% {
+        filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.04));
+        box-shadow: 0 0 6px rgba(255, 255, 255, 0.02);
+    }
+}
+
+@keyframes glow-html {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(255, 140, 0, 0.6)) drop-shadow(0 0 14px rgba(255, 140, 0, 0.25));
+        box-shadow: 0 0 10px 2px rgba(255, 140, 0, 0.12);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(255, 140, 0, 0.8)) drop-shadow(0 0 24px rgba(255, 140, 0, 0.4));
+        box-shadow: 0 0 14px 3px rgba(255, 140, 0, 0.18);
+    }
+}
+
+@keyframes glow-css {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(0, 123, 255, 0.6)) drop-shadow(0 0 14px rgba(0, 123, 255, 0.25));
+        box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.12);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(0, 123, 255, 0.8)) drop-shadow(0 0 24px rgba(0, 123, 255, 0.4));
+        box-shadow: 0 0 14px 3px rgba(0, 123, 255, 0.18);
+    }
+}
+
+@keyframes glow-js {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(241, 224, 90, 0.6)) drop-shadow(0 0 14px rgba(241, 224, 90, 0.25));
+        box-shadow: 0 0 10px 2px rgba(241, 224, 90, 0.12);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(241, 224, 90, 0.8)) drop-shadow(0 0 24px rgba(241, 224, 90, 0.4));
+        box-shadow: 0 0 14px 3px rgba(241, 224, 90, 0.18);
+    }
+}
+
+@keyframes glow-python {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(48, 105, 152, 0.6)) drop-shadow(0 0 14px rgba(48, 105, 152, 0.25));
+        box-shadow: 0 0 10px 2px rgba(48, 105, 152, 0.12);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(48, 105, 152, 0.8)) drop-shadow(0 0 24px rgba(48, 105, 152, 0.4));
+        box-shadow: 0 0 14px 3px rgba(48, 105, 152, 0.18);
+    }
+}
+
+@keyframes glow-fastapi {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(0, 150, 136, 0.6)) drop-shadow(0 0 14px rgba(0, 150, 136, 0.25));
+        box-shadow: 0 0 10px 2px rgba(0, 150, 136, 0.12);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(0, 150, 136, 0.8)) drop-shadow(0 0 24px rgba(0, 150, 136, 0.4));
+        box-shadow: 0 0 14px 3px rgba(0, 150, 136, 0.18);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.technology-icon {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* ============================= */
+/* EFEITOS, HOVER, FILTER        */
+/* ============================= */
+
+.icon-wrapper {
+    display: inline-block;
+    width: 60px; /* Ajuste conforme necessário */
+    height: 60px;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+.icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.icon-html {
+    animation: glow-html 4s ease-in-out infinite;
+}
+.icon-css {
+    animation: glow-css 4s ease-in-out infinite;
+}
+.icon-js {
+    animation: glow-js 4s ease-in-out infinite;
+}
+
+.icon-python {
+    animation: glow-python 4s ease-in-out infinite;
+}
+
+.icon-fastapi {
+    animation: glow-fastapi 4s ease-in-out infinite;
+}
+
+.subheader {
+    font-size: 30px;
+    background: linear-gradient(90deg, #fff, #ffffee, #fff);
+    filter: drop-shadow(0 0 10px #ffffee) drop-shadow(0 0 20px #ffffee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out, filter 2s ease-in-out;
+}
+
+.subheader.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: drop-shadow(0 0 15px #ffffee) drop-shadow(0 0 30px #ffffee) drop-shadow(0 0 45px #ffffee);
+}
+
+.my-projects .projects {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.my-projects .projects.right {
+    transform: translateX(100px);
+}
+
+.my-projects .projects.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.social-midia-header a {
+    display: inline-block;
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 20px #fff);
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #0ff;
+}
+
+.app-myprojects .my-projects .projects .technologies-used .myproject-icon {
+    filter: drop-shadow(0 0 10px #fff) drop-shadow(0 0 30px #fff);
+}
+
+.projects {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.projects.left {
+    transform: translateX(-100px);
+}
+
+.projects.right {
+    transform: translateX(100px);
+}
+
+.projects.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.projects:not(.visible).left {
+    transform: translateX(-100px);
+}
+
+.projects:not(.visible).right {
+    transform: translateX(100px);
+}
+
+.projects.visible:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.technologies-used .myproject-icon:hover {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.08)) drop-shadow(0 0 28px rgba(255, 255, 255, 0.04));
+    box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.06);
+}
+
+.aboutme {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aboutme.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --------------------------------- */
+/* GLOW PERSONALIZADO POR TECNOLOGIA */
+/* --------------------------------- */
+
+.icon-html {
+    filter: drop-shadow(0 0 6px rgba(255, 140, 0, 0.6)) drop-shadow(0 0 14px rgba(255, 140, 0, 0.25));
+    box-shadow: 0 0 10px 2px rgba(255, 140, 0, 0.12);
+}
+
+.icon-css {
+    filter: drop-shadow(0 0 6px rgba(0, 123, 255, 0.6)) drop-shadow(0 0 14px rgba(0, 123, 255, 0.25));
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.12);
+}
+
+.icon-js {
+    filter: drop-shadow(0 0 6px rgba(241, 224, 90, 0.6)) drop-shadow(0 0 14px rgba(241, 224, 90, 0.25));
+    box-shadow: 0 0 10px 2px rgba(241, 224, 90, 0.12);
+}
+
+.icon-python {
+    filter: drop-shadow(0 0 6px rgba(48, 105, 152, 0.6)) drop-shadow(0 0 14px rgba(48, 105, 152, 0.25));
+    box-shadow: 0 0 10px 2px rgba(48, 105, 152, 0.12);
+}
+
+.icon-fastapi {
+    filter: drop-shadow(0 0 6px rgba(0, 150, 136, 0.6)) drop-shadow(0 0 14px rgba(0, 150, 136, 0.25));
+    box-shadow: 0 0 10px 2px rgba(0, 150, 136, 0.12);
+}
+
+/* ============================= */
+/* COMPONENTES E SEÇÕES          */
+/* ============================= */
+.app-main {
+    margin: auto;
+    width: 85%;
+}
+
+.icon img {
+    width: 45px;
+    max-width: 100%;
+    height: auto;
+}
+
+.bungee-text {
+    font-family: "Bungee", cursive;
+}
+
+/* ----------------------------- */
+/* HEADER                        */
+/* ----------------------------- */
+.app-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4.37rem;
+    margin-bottom: 12.5rem;
+}
+
+.app-header .text-header h1 {
+    font-size: 6.87rem;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    text-align: center;
+}
+
+.app-header .subheader-first {
+    font-size: 1.87rem;
+    margin-top: 18.75rem;
+}
+
+.app-header .social-midia-header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.app-header .social-midia-header ul li a {
+    text-decoration: none;
+}
+
+.app-header .social-midia-header ul li a img {
+    height: 3.12rem;
+    width: 3.12rem;
+    margin-right: 2.18rem;
+}
+
+/* ----------------------------- */
+/* ABOUT ME                       */
+/* ----------------------------- */
+.app-aboutme {
+    margin-top: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-aboutme .subheader.aboutme {
+    align-self: center;
+    margin-bottom: 3.75rem;
+    font-size: 1.87rem;
+}
+
+.app-aboutme .text-aboutme {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-aboutme .about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80.75rem;
+}
+
+.app-aboutme .about-me .text-aboutme .text-aboutme-big {
+    font-size: 3.75rem;
+    width: 50rem;
+    height: auto;
+}
+
+.app-aboutme .about-me .text-aboutme .text-aboutme-small {
+    font-size: 1.56rem;
+    width: 50rem;
+    height: auto;
+}
+
+.app-aboutme .about-me .profile-photo img {
+    width: 23.12rem;
+    height: 23.12rem;
+    border-radius: 200px;
+}
+
+.app-aboutme .about-me .text-aboutme .buttons-aboutme {
+    display: flex;
+    flex-direction: row;
+}
+
+.app-aboutme .about-me .text-aboutme .buttons-aboutme .button-download-cv,
+.app-aboutme .about-me .text-aboutme .buttons-aboutme .button-contactme {
+    margin: 1.25rem 1.25rem 1.25rem 0;
+    font-size: 1.25rem;
+    padding: 1.25rem 1.87rem;
+    border-radius: 15px;
+    border: #fff 2px solid;
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+/* ----------------------------- */
+/* CERTIFICATES & TECHSTACK      */
+/* ----------------------------- */
+.certificates-and-techstack {
+    margin-top: 28.12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificates-and-techstack .buttons-certificates-and-techstack {
+    display: flex;
+    flex-direction: row;
+    width: 80rem;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.certificates-and-techstack .buttons-certificates-and-techstack .button-certificates,
+.certificates-and-techstack .buttons-certificates-and-techstack .button-techstack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 44.37rem;
+    height: 5.93rem;
+    background-color: var(--french-gray);
+    border-radius: 20px;
+}
+
+.certificates-and-techstack .techstack {
+    width: 80rem;
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.certificates-and-techstack .techstack .teckstack-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: #555555 3px solid;
+    margin-top: 1.25rem;
+    border-radius: 15px;
+}
+
+.certificates-and-techstack .techstack .teckstack-box img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.625rem;
+}
+
+.certificates-and-techstack .techstack .teckstack-box .techstack-box-name {
+    font-size: 1.56rem;
+    padding: 0.625rem;
+}
+
+.certificates-and-techstack .techstack .teckstack-box .techstack-box-text {
+    font-size: 1.25rem;
+    padding: 0.937rem;
+}
+
+.certificates-and-techstack .certificates {
+    margin-top: 1.87rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.certificates-and-techstack .certificates .certificates-box img {
+    height: 16.78rem;
+    width: 25.93rem;
+}
+
+.certificates,
+.techstack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.techstack-box-icon img {
+    height: 2.18rem;
+    width: 2.18rem;
+}
+
+/* ----------------------------- */
+/* MY PROJECTS                   */
+/* ----------------------------- */
+.app-myprojects {
+    margin-top: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-myprojects .subheader {
+    margin-top: 25rem;
+    margin-bottom: 3.75rem;
+    font-size: 1.87rem;
+}
+
+.app-myprojects .my-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12.5rem;
+}
+
+.app-myprojects .my-projects .projects {
+    width: 34.37rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-myprojects .my-projects .projects .mockup-notebook {
+    position: relative;
+    top: 45px;
+    height: 34.37rem;
+    width: 34.37rem;
+}
+
+.app-myprojects .my-projects .projects h5 {
+    position: relative;
+    bottom: 15px;
+    font-size: 1.25rem;
+}
+
+.my-projects .projects .technologies-used {
+    background-color: transparent;
+}
+
+.app-myprojects .my-projects .projects .technologies-used ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.app-myprojects .my-projects .projects .technologies-used ul li {
+    margin: 0.312rem;
+}
+
+.app-myprojects .my-projects .projects .technologies-used .myproject-icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    display: inline-block;
+    transition: transform 0.28s ease, filter 0.28s ease, box-shadow 0.28s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    will-change: transform, filter, box-shadow;
+}
+
+/* ----------------------------- */
+/* CONTACT ME                    */
+/* ----------------------------- */
+.app-contactme {
+    margin-top: 4.37rem;
+    margin-bottom: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-contactme .subheader {
+    margin-top: 28.12rem;
+    margin-bottom: 3.75rem;
+    font-size: 1.87rem;
+}
+
+.app-contactme .contactme-main {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.app-contactme .contactme-main .icon-contactme {
+    height: 2.18rem;
+    width: 2.18rem;
+}
+
+.app-contactme .contactme-main .send-me-a-hello {
+    display: flex;
+    flex-direction: column;
+    width: 28.12rem;
+    border: #555555 3px solid;
+    border-radius: 20px;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .sudheader-and-share {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.937rem;
+
+    h5 {
+        font-size: 1.87rem;
+    }
+
+    .share {
+        height: 1.87rem;
+        width: 1.87rem;
+        align-self: center;
+    }
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email p {
+    margin-left: 0.937rem;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme,
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.your-message,
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.send-message {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.87rem;
+    align-items: center;
+    background-color: transparent;
+    border: #555555 2px solid;
+    padding: 10px 0.937rem;
+    margin: 0.937rem;
+    border-radius: 20px;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.your-message {
+    height: 10.62rem;
+    align-items: start;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme.send-message {
+    align-items: center;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .send-me-a-email .box-contactme img {
+    margin-right: 0.31rem;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .connect-with-me {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 0.937rem 1.25rem 0.937rem;
+}
+
+.app-contactme .contactme-main .send-me-a-hello .connect-with-me .box-connect {
+    flex: 1 1 200px;
+    display: flex;
+    background-color: var(--platinum);
+    border-radius: 12px;
+    padding: 0.625rem 0.937rem;
+
+    .text-1 {
+        color: var(--eerie-black);
+    }
+
+    .text-2 {
+        color: var(--outer-space);
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.app-contactme .contactme-main .comments {
+    display: flex;
+    flex-direction: column;
+    border: #555555 3px solid;
+    border-radius: 20px;
+    width: 50rem;
+
+    h5 {
+        margin: 0.937rem;
+        font-size: 1.87rem;
+        margin-bottom: 4.37rem;
+    }
+}
+
+.app-contactme .contactme-main .comments .box-comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.937rem;
+    margin-bottom: 0px;
+    padding: 0.937rem 0.625rem;
+    background-color: transparent;
+    border: #555555 2px solid;
+    border-radius: 1.25rem;
+
+    p {
+        margin-left: 0.937rem;
+    }
+}
+
+.app-contactme .contactme-main .comments .box-comments.your-message {
+    height: 10.62rem;
+    align-items: start;
+}
+
+.app-contactme .contactme-main .comments .box-comments.send-profile-photo {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        align-self: self-start;
+    }
+
+    a {
+        margin-top: 0.625rem;
+        background-color: var(--platinum);
+        color: var(--onyx);
+        width: 96%;
+        height: 4.37rem;
+        border-radius: 1.25rem;
+        padding: 1.25rem;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+}
+
+.app-contactme .contactme-main .comments .box-comments.button-send-comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.937rem 0.937rem 1.25rem 0.937rem;
+    padding: 0.937rem 0.625rem;
+    border: #555555 2px solid;
+    background-color: transparent;
+    border-radius: 1.25rem;
+
+    a {
+        margin-left: 0.937rem;
+    }
+}

@@ -1,0 +1,158 @@
+/* ============================= */
+/* IMPORTAÇÕES DE FONTES         */
+/* ============================= */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* ============================= */
+/* VARIÁVEIS CSS                 */
+/* ============================= */
+
+:root {
+    --seasalt: #f8f9faff;
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray: #ced4daff;
+    --french-gray-2: #adb5bdff;
+    --slate-gray: #6c757dff;
+    --outer-space: #495057ff;
+    --onyx: #343a40ff;
+    --eerie-black: #212529ff;
+}
+
+/* ============================= */
+/* SELETORES GLOBAIS             */
+/* ============================= */
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--antiflash-white);
+    font-family: "JetBrains Mono";
+}
+
+.app-main {
+    width: 85%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.app-nav {
+    margin-bottom: 20px;
+
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        border: #fff 2px solid;
+        border-radius: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.informations {
+    .text {
+        width: 850px;
+
+        .header {
+            font-size: 75px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 25px;
+        }
+    }
+
+    .buttons {
+        margin-top: 30px;
+
+        .button-github {
+            height: 20px;
+            width: 180px;
+
+            a {
+                font-size: 25px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                border: #fff 2px solid;
+                border-radius: 10px;
+                padding: 5px;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .technologies-used {
+        margin-top: 80px;
+
+        .subheader {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 30px;
+
+            img {
+                margin-right: 15px;
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-top: 20px;
+
+            li {
+                margin-right: 15px;
+            }
+        }
+
+        .icon {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+.informations-visual {
+    .trailer {
+        height: 400px;
+        width: 650px;
+        background-color: transparent;
+        margin-bottom: 40px;
+        border: #fff 2px solid;
+        border-radius: 20px;
+    }
+
+    .imagens {
+        height: 600px;
+        width: 650px;
+        background-color: transparent;
+        border: #000 2px solid;
+        border-radius: 20px;
+        margin-bottom: 40px;
+
+        img {
+            border-radius: 20px;
+        }
+    }
+}
